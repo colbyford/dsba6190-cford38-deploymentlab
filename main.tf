@@ -24,7 +24,7 @@ resource "random_integer" "deployment_id_suffix" {
 // Resource Group
 
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.app_name}-${var.student_name}-${var.environment}-${random_integer.deployment_id_suffix.result}-rg"
+  name     = "${var.class_name}-${var.student_name}-${var.environment}-${random_integer.deployment_id_suffix.result}-rg"
   location = var.location
 
   tags = local.tags
@@ -34,7 +34,7 @@ resource "azurerm_resource_group" "rg" {
 // Storage Account
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "${var.app_name}${var.student_name}${var.environment}${random_integer.deployment_id_suffix.result}st"
+  name                     = "${var.class_name}${var.student_name}${var.environment}${random_integer.deployment_id_suffix.result}st"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
