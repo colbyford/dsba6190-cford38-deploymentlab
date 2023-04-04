@@ -4,10 +4,12 @@
 
 In your GitHub repo, create the follow secrets with the specified values.
 
-- ARM_CLIENT_ID: `a9c9135a-4442-4802-a5de-1a5ca192e4b9`
+- ARM_CLIENT_ID: `c075ec05-db99-4195-ba8b-f0d42995e5e1`
 - ARM_CLIENT_SECRET: ``
-- ARM_SUBSCRIPTION_ID: `21f436e1-bf10-4e17-9482-701611ba96e3`
-- ARM_TENANT_ID: `e349bd57-2c5c-4998-b9d8-f719ae47dcde`
+- ARM_SUBSCRIPTION_ID: `0bb59590-d012-407d-a545-7513aae8c4a7`
+- ARM_TENANT_ID: `88d59d7d-aecb-41b2-90c5-55595de02536`
+
+(This was generated using the command `az ad sp create-for-rbac --name dsba6190devops` and then assigning the service principal as a Contributor the the Subscription.)
 
 ## Getting Started with Terraform
 
@@ -16,4 +18,14 @@ Make your `main.tf`, `backend.tf`, and `variables.tf` files.
 Initialize Terraform Locally
 ```bash
 terraform init
+```
+
+Check your HCL formatting
+```bash
+terraform fmt --recursive
+```
+
+See what Terraform will deploy
+```bash
+terraform plan
 ```
