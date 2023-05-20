@@ -1,5 +1,7 @@
 # DSBA6190 - Deployment Lab
 
+<h3 align="right">Colby T. Ford, Ph.D.</h3>
+
 ## Set up your Repo's Secrets
 
 In your GitHub repo, create the follow secrets with the specified values.
