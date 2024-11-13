@@ -1,9 +1,9 @@
 // Tags
 locals {
   tags = {
-    owner       = var.tag_department
-    region      = var.tag_region
-    environment = var.environment
+    class      = var.tag_class
+    instructor = var.tag_instructor
+    semester   = var.tag_semester
   }
 }
 
@@ -11,8 +11,8 @@ locals {
 
 /// Subscription ID
 
-data "azurerm_subscription" "current" {
-}
+# data "azurerm_subscription" "current" {
+# }
 
 // Random Suffix Generator
 
@@ -24,7 +24,7 @@ resource "random_integer" "deployment_id_suffix" {
 // Resource Group
 
 resource "azurerm_resource_group" "rg" {
-  name     = "${var.class_name}-${var.student_name}-${var.environment}-${random_integer.deployment_id_suffix.result}-rg"
+  name     = "rg-${var.class_name}-${var.student_name}-${var.environment}-${var.location}-${random_integer.deployment_id_suffix.result}"
   location = var.location
 
   tags = local.tags
@@ -34,7 +34,7 @@ resource "azurerm_resource_group" "rg" {
 // Storage Account
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "${var.class_name}${var.student_name}${var.environment}${random_integer.deployment_id_suffix.result}st"
+  name                     = "sto${var.class_name}${var.student_name}${var.environment}${random_integer.deployment_id_suffix.result}"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"

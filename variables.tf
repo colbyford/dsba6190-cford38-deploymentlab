@@ -1,17 +1,17 @@
-variable "tag_department" {
+variable "tag_class" {
   type    = string
-  default = "test_dept"
+  default = "dsba6190"
 }
 
-variable "tag_business_owner" {
+variable "tag_instructor" {
   type    = string
-  default = "test_manager"
+  default = "cford38"
 }
 
 
-variable "tag_region" {
+variable "tag_semester" {
   type    = string
-  default = "eastus"
+  default = "fall2024"
 }
 
 variable "location" {
