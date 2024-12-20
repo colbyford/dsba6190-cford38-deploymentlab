@@ -11,7 +11,7 @@ In your GitHub repo, create the follow secrets with the specified values.
 - ARM_SUBSCRIPTION_ID: `e9bc187a-e9a1-46be-822e-e955a2563601`
 - ARM_TENANT_ID: `88d59d7d-aecb-41b2-90c5-55595de02536`
 
-(This was generated using the command `az ad sp create-for-rbac --name dsba6190devops` and then assigning the service principal as a Contributor the the Subscription.)
+(This was generated using the command `az ad sp create-for-rbac --name dsba6190devops` and then assigning the service principal as a *Contributor* the the Subscription.)
 
 ## Getting Started with Terraform
 
