@@ -11,7 +11,7 @@ variable "tag_instructor" {
 
 variable "tag_semester" {
   type    = string
-  default = "fall2024"
+  default = "fall2025"
 }
 
 variable "location" {
@@ -37,7 +37,7 @@ variable "environment" {
 variable "student_name" {
   description = "Application Name"
   type        = string
-  default     = "cford38"
+  default     = "aflemis1"
 }
 
 variable "class_name" {
