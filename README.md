@@ -32,6 +32,7 @@ See what Terraform will deploy
 terraform plan
 ```
 
+
 ## Deploying Using GitHub Actions
 
 Once you commit and push your changes to the Terraform code, GitHub Actions will kick off a workflow that uses the secrets to deployed the Azure services.
